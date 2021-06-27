@@ -4,6 +4,7 @@ import firebase from "firebase";
 import { Box, Heading, Center, Input, Button, Text } from "@chakra-ui/react";
 import { Card } from "./Card";
 import { ChatBox } from "./ChatBox";
+import { Navbar } from "./Navbar";
 export const Chat = () => {
   let [humanMessages, setHumanMessages] = useState([]);
   let [message, setMessage] = useState("");
@@ -22,8 +23,8 @@ export const Chat = () => {
       text: message,
     };
     setHumanMessages([...humanMessages, message]);
-    axios.post("http://localhost:5000/home", user).then((response) => {
-      axios.post("http://localhost:5000/chat", messageText).then((res) => {
+    axios.post("https://flow-0.herokuapp.com/home", user).then((response) => {
+      axios.post("https://flow-0.herokuapp.com/chat", messageText).then((res) => {
         setAiMessages([...aiMessages, res.data.data]);
       });
     });
@@ -32,6 +33,7 @@ export const Chat = () => {
 
   return (
     <div>
+        <Navbar />
       <Box
         minH="100vh"
         py="12"

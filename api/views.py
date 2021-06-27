@@ -11,7 +11,7 @@ import time
 import os
 import openai
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 views = Blueprint('views', __name__)
 
@@ -27,7 +27,7 @@ auth = firebase.auth()
 
 user = None
 @views.route("/home", methods=['POST'])
-@cross_origin(supports_credentials=True)
+# @cross_origin(supports_credentials=True)
 def home():
     global user_info
     token = request.get_json()
@@ -53,7 +53,7 @@ def home():
     return jsonify({"data": user.email})
 
 @views.route("/chat", methods=['POST'])
-@cross_origin(supports_credentials=True)
+# @cross_origin(supports_credentials=True)
 def chat():
     global user_info
     human_res = request.get_json()
@@ -70,7 +70,7 @@ def chat():
             engine="davinci",
             prompt=prompt,
             temperature=0.9,
-            max_tokens=300,
+            max_tokens=150,
             top_p=1,
             frequency_penalty=0,
             presence_penalty=0.6,

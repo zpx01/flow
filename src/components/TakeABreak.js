@@ -8,6 +8,7 @@ import ReactJkMusicPlayer from "react-jinke-music-player";
 import "react-jinke-music-player/assets/index.css";
 import { GifModal } from "./GifModal";
 import { MeditateModal } from "./MeditateModal";
+import { Navbar } from "./Navbar";
 import Particles from "react-particles-js";
 
 const giphyFetch = new GiphyFetch("T8n3iMoLUOguSsK56GgLJRYhh9lyrAWL");
@@ -37,6 +38,7 @@ export const TakeABreak = () => {
   ];
   return (
     <div>
+        <Navbar />
       <Box
         minH="100vh"
         py="12"

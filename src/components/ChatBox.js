@@ -3,6 +3,7 @@ import { Center, Heading, Text } from "@chakra-ui/react";
 import { StreamChat } from "stream-chat";
 import { ChatBubble, Message } from "react-chat-ui";
 import "./chat.css";
+import firebase from "firebase";
 
 export const ChatBox = ({ humanMessages, aiMessages }) => {
   const client = StreamChat.getInstance("2mfepnmrh4rw");
@@ -21,7 +22,7 @@ export const ChatBox = ({ humanMessages, aiMessages }) => {
           {allMessages.map((message) => (
             <div>
               <div class="mine messages">
-                <div class="message last">Human: {message[0]}</div>
+                <div class="message last">{firebase.auth().currentUser.displayName}: {message[0]}</div>
               </div>
               <div class="yours messages">
                 <div class="message">{message[1]}</div>

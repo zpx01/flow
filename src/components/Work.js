@@ -3,6 +3,7 @@ import { CountdownTimer } from "./CountdownTimer";
 import { Tasks } from "./Tasks";
 import { Card } from "./Card";
 import { useState } from "react";
+import { useHistory } from "react-router";
 import {
   chakra,
   Box,
@@ -16,7 +17,9 @@ import {
   Link,
   Badge,
   VStack,
-  Heading
+  Heading,
+  Center,
+  Button
 } from "@chakra-ui/react";
 import ReactJkMusicPlayer from "react-jinke-music-player";
 import "react-jinke-music-player/assets/index.css";
@@ -26,10 +29,14 @@ import { Navbar } from "./Navbar";
 import { Timer } from "./Timer";
 
 export const Work = () => {
+  let history = useHistory();
   const topBg = useColorModeValue("gray.800", "gray.700");
   const bottomBg = useColorModeValue("white", "gray.800");
   const [bottomBgHex] = useToken("colors", [bottomBg]);
   const [todos, setTodos] = useState([]);
+  let goToBreak = () => {
+    history.push("/break")
+  }
   function deleteTodo(id) {
     const newTodos = todos.filter((item) => {
       return item.id !== id;
@@ -114,6 +121,7 @@ export const Work = () => {
               </VStack>
             </Card>
           </SimpleGrid>
+          <br />
           <ReactJkMusicPlayer
             theme={"dark"}
             locale={"en_US"}
@@ -121,6 +129,9 @@ export const Work = () => {
             audioLists={audioList1}
           />
         </Flex>
+        <Center>
+            <Button colorScheme="facebook" onClick={goToBreak} size="lg">Take a Break</Button>
+          </Center>
       </Box>
     </div>
   );

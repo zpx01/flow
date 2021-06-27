@@ -53,7 +53,7 @@ export const Home = () => {
   };
 
   useEffect(() => {
-    axios.post("http://localhost:5000/home", user).then((res) => {
+    axios.post("https://flow-0.herokuapp.com/home", user).then((res) => {
       console.log(res.data);
     });
   }, []);
@@ -82,7 +82,7 @@ export const Home = () => {
           </Center>
           <br />
           <Center>
-            <Box>
+            <Box as="button" onClick={signOut}>
               <Card
                 style={{
                   background: "white",
