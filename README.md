@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# Flow
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+***
 
-## Available Scripts
+## 💡 Inspiration
+Many people have seen decreases in their productivity throughout the pandemic. Staring at a computer screen for hours can become boring and demotivating. People lose focus from their important tasks and are unable to relieve any stress from work. Additionally, since many people are at home, they feel that if they are not busy constantly, then they are wasting precious time. These factors can create an unhealthy atmosphere that increases stress and negatively impacts a person's mental health. Our app aims to help individuals focus on their tasks while also providing them with outlets for stress relief. Furthermore, we believe that talking about your problems is an effective method of alleviating stress and removing mental burdens. Thus, we integrated an AI therapist in our app that can help users talk about their problems and figure out solutions that can improve their situation.
 
-In the project directory, you can run:
 
-### `yarn start`
+## 💻 What it does
+Flow provides its users with a virtual study space, AI therapist, and several stress-relieving activities. With the virtual study space, you can use a timer to set a studying routine (i.e. pomodoro technique), create a checklist and mark items off as you complete them, and use a music player to listen to our curated LoFi Hip-Hop playlists as you work. The GPT-3 AI therapist can provide consolation and advice based on the input provided. Our Take A Break page offers meditation soundtracks, a music player with LoFi Hip-Hop playlists, and a GIF searcher from GIPHY for when you're feeling overworked.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🛠 How We Built It
+We used **React, Flask, CSS, HTML, Firebase (for authentication), Cloudinary (asset storage), chakra-ui**, and **OpenAI** to create this project. React.js was used for frontend, while Flask was used for the backend python server.  Our authentication is extremely secure despite using SSO (Single Sign-On) authentication because of our use of Oauth-2.0. We made sure the auth token is only distributed on the frontend, to protect from Man-in-the-Middle hacks. Additionally, we used OpenAI's beta GPT3 model to create the chat therapy chatbot, which has been trained on over 570 gigabytes of text. Chakra-ui was used for styling, and Particles.js was used for enhanced visual effects. We also integrated the GIPHY API on our React frontend for the "Take a Break" page.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🛑 Challenges we ran into
+Our greatest challenge was using the various APIs and libraries utilized by this project. Most of us did not have any experience working with **OpenAI** or **React** so it took a bit of messing around before we could properly implement them into our project. One of the hardest parts was understanding and designing every component of the React code, and implementing the correct modules necessary for them to work correctly. Furthermore, integrating the OpenAI GPT-3 API into our backend required us to research all of the NLP model parameters, which were a bit confusing initially. We also ran into a lot of challenges while building the timer since the interaction between the timer buttons had many bugs. We're happy that we were able to overcome these challenges in such a short time and deliver an amazing product.
 
-### `yarn test`
+## ✅ Accomplishments that we're proud of
+We're particularly proud of the ingenuity of our idea and how our app improves mental health, something that is vital to one's well-being and success. While there have been many mental health-focused apps created, Flow distinguishes itself by placing an emphasis on productivity while giving its users many options with which they can unwind and recover from fatigue. By making an all-inclusive app that can really make a difference in the lives of people, we are extremely proud to say that we persisted through a lot of difficult technologies and learning curves of languages and integration to build a fully-functional app. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📚 What we learned
+Through this project, we vastly improved our capabilities with **React**. Additionally, we learned more about the process of creating a web application. Going through the task of developing this app, we were also introduced to the various difficulties sending data between the frontend and the backend. We also learned more about the fundamentals of NLP technology and how we can integrate it into our applications using OpenAI. Finally, we also developed our teamwork skills and understood the importance of collaboration for an extensive project like Flow.
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📈 What's next for Flow
+We plan on continuing the development of Flow after this hackathon. Some future improvements could be developing a more refined front-end and adding a progress bar to the task list. Finally, we also plan to integrate more services and APIs such as a Spotify Web Player, which could improve the work and relaxation experience for users. We plan to add more features for boosting productivity and improving the relaxation platform by adding more options for stress-relief.
