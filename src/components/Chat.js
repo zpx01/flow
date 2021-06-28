@@ -23,8 +23,8 @@ export const Chat = () => {
       text: message,
     };
     setHumanMessages([...humanMessages, message]);
-    axios.post("https://flow-0.herokuapp.com/home", user).then((response) => {
-      axios.post("https://flow-0.herokuapp.com/chat", messageText).then((res) => {
+    axios.post("http://localhost:5000/home", user).then((response) => {
+      axios.post("http://localhost:5000/chat", messageText).then((res) => {
         setAiMessages([...aiMessages, res.data.data]);
       });
     });

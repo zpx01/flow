@@ -53,7 +53,7 @@ export const Home = () => {
   };
 
   useEffect(() => {
-    axios.post("https://flow-0.herokuapp.com/home", user).then((res) => {
+    axios.post("http://localhost:5000/home", user).then((res) => {
       console.log(res.data);
     });
   }, []);

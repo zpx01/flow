@@ -27,7 +27,7 @@ auth = firebase.auth()
 
 user = None
 @views.route("/home", methods=['POST'])
-# @cross_origin(supports_credentials=True)
+@cross_origin(supports_credentials=True)
 def home():
     global user_info
     token = request.get_json()
@@ -53,7 +53,7 @@ def home():
     return jsonify({"data": user.email})
 
 @views.route("/chat", methods=['POST'])
-# @cross_origin(supports_credentials=True)
+@cross_origin(supports_credentials=True)
 def chat():
     global user_info
     human_res = request.get_json()
