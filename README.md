@@ -1,5 +1,6 @@
 # Flow
 
+
 ## 💡 Inspiration
 Many people have seen decreases in their productivity throughout the pandemic. Staring at a computer screen for hours can become boring and demotivating. People lose focus from their important tasks and are unable to relieve any stress from work. Additionally, since many people are at home, they feel that if they are not busy constantly, then they are wasting precious time. These factors can create an unhealthy atmosphere that increases stress and negatively impacts a person's mental health. Our app aims to help individuals focus on their tasks while also providing them with outlets for stress relief. Furthermore, we believe that talking about your problems is an effective method of alleviating stress and removing mental burdens. Thus, we integrated an AI therapist in our app that can help users talk about their problems and figure out solutions that can improve their situation.
 
